@@ -1,4 +1,4 @@
-﻿//  TASK 1
+﻿            //  TASK 1
 Console.WriteLine("\nTask 1 \n");
 for (int i = 1; i < 20; i++)
 {
@@ -19,7 +19,7 @@ for (int i = 0; i < array.Length; i++)
     Console.Write($"{array[i]} ");
 }
 
-//  TASK 3
+            //  TASK 3  / oops missed that it had to be strings, sorry
 
 Console.WriteLine();
 Console.WriteLine("\nTask 3 \n");
@@ -33,3 +33,42 @@ for (int row = 0; row < 3; row++)
         Console.Write($"{array2D[row, col]} ");
     }
 }
+
+
+//  Task 4
+
+Console.WriteLine();
+Console.WriteLine("\nTask 4 \n");
+
+string stringNum;
+int num;
+int n = 0;
+int sum = 0;
+
+do //repeat asking for user input
+{
+    Console.WriteLine("Enter a number: "); // asks for user input
+    stringNum = Console.ReadLine();
+    if (int.TryParse(stringNum, out num)) //input is stored as num
+    {
+        if (num < 100)
+        {
+            n++;
+            sum += num;
+            continue;
+        }
+        else
+        {
+            Console.WriteLine("You entered a number larger than 100");
+        }
+    }
+}
+while (sum < 100);
+
+        Console.WriteLine($"Numbers entered: {n} \n"); //output calculation 
+        Console.WriteLine($"Sum of entered numbers: {sum}");
+
+
+
+
+    
